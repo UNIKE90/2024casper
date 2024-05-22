@@ -1,7 +1,6 @@
 $(document).ready(function(){
 
   // 모달창
-
   const modal=`
     <div class="modal">
       <div class="m_inner">
@@ -28,4 +27,6 @@ $(document).ready(function(){
     close_popup();
   });
 
+
+  
 })

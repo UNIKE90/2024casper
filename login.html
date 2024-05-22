@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>로그인 폼</title>
+  <style>
+    fieldset{
+      border:none;
+      background: #f1f1f1;
+      width: 500px;
+      /* margin: 0 auto; */
+      padding: 80px 60px;
+      box-sizing: border-box;
+      position:absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%, -50%);
+    }
+    legend, label[for="id_txt"], label[for="pw_txt"]{display:none}
+    #id_txt, #pw_txt{
+      border:none;
+      width: 100%;
+      height: 60px;
+      text-indent: 20px;
+      font-size: 16px;
+    }
+    label[for="id_save"]{font-size:14px; margin-left: 5px;}
+    #login_btn{
+      width: 100%;
+      height: 60px;
+      color: #ffffff;
+      background: #215499;
+      border:none;
+      font-size: 16px;
+    }
+    .search{
+      text-align: center;
+      margin-top:40px;
+    }
+    .search a{
+      font-size: 14px;
+      color:#333;
+      text-decoration:none;
+      padding: 0 15px; 
+      border-right:1px solid #333;
+    }
+    .search a:last-of-type{border:none;}
+    .search a:hover{text-decoration:underline;}
+  </style>
+</head>
+<body>
+  <form name="login">
+    <fieldset>
+      <legend>로그인 폼</legend>
+      <p>
+        <label for="id_txt">ID : </label>
+        <input type="text" id="id_txt" name="id_txt" maxlength="16" placeholder="아이디를 입력해주세요." autocomplete="off">
+      </p>
+      <p>
+        <label for="pw_txt">PW : </label>
+        <input type="password" maxlength="16" id="pw_txt" name="pw_txt" placeholder="비밀번호를 입력해주세요." autocomplete="off">
+      </p>
+      <p><input type="checkbox" name="id_save" id="id_save"><label for="id_save">아이디 저장</label></p>
+      <p><input type="submit" value="로그인" id="login_btn"></p>
+      <p class="search">
+        <a href="#" title="아이디 찾기">아이디 찾기</a>
+        <a href="#" title="비밀번호 찾기">비밀번호 찾기</a>
+        <a href="#" title="회원가입">회원가입</a>
+      </p>
+    </fieldset>
+  </form>
+  
+  <!-- 제이쿼리 라이브러리 -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    
+    $(document).ready(function(){
+      let key = getCookie('idChk'); //쿠키 이름 저장
+
+      if(key!=""){ //만약에 key변수에 값이 있다면
+        $('#id_txt').val(key); //id값을 저장
+      }
+
+      if($('#id_txt').val()!=""){ // 만약에 id값이 있다면
+        $('#id_save').attr('checked',true); // 체크박스에 체크를 해둔다.
+      }
+
+      $('#id_save').change(function(){ //체크박스의 상태가 변경되면 아래내용 실행
+        if($('#id_save').is(':checked')){ //체크박스에 체크가 된경우라면
+          setCookie('idChk', $('#id_txt').val(), 7); //쿠키를 생성하고
+        }else{ //그렇지 않으면
+          deleteCookie('idChk'); //쿠키를 삭제한다.
+        }
+      });
+
+      $('#id_txt').keyup(function(){ //체크박스에 키를 눌렀을 경우
+        if($('#id_save').is(':checked')){ //체크박스에 체크가 된 경우라면
+          setCookie('idChk', $('#id_txt').val(), 7); //쿠키를 생성한다
+        }
+      });
+    });
+
+    function setCookie(cookieName, value, exdays){
+        var exdate = new Date();
+        exdate.setDate(exdate.getDate() + exdays);
+        var cookieValue = escape(value) + ((exdays==null) ? "" : "; expires=" + exdate.toGMTString());
+        document.cookie = cookieName + "=" + cookieValue;
+    }
+    
+    function deleteCookie(cookieName){
+      var expireDate = new Date();
+      expireDate.setDate(expireDate.getDate() - 1);
+      document.cookie = cookieName + "= " + "; expires=" + expireDate.toGMTString();
+    }
+      
+    function getCookie(cookieName) {
+      cookieName = cookieName + '=';
+      var cookieData = document.cookie;
+      var start = cookieData.indexOf(cookieName);
+      var cookieValue = '';
+      if(start != -1){
+        start += cookieName.length;
+        var end = cookieData.indexOf(';', start);
+        if(end == -1)end = cookieData.length;
+        cookieValue = cookieData.substring(start, end);
+      }
+      return unescape(cookieValue);
+    }
+  </script>
+</body>
+</html>
