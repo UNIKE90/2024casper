@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+/* common.css
+  header, footer서식
+*/
+
+header{
+  position:absolute;
+  width:100%;height:70px;
+  background:#5a5a5a;
+}
+header h1{
+  padding: 24px 0px 0px 2%;
+}
+
+/* 내비게이션 */
+.gnb{
+  width: 600px;
+  margin: -21px auto 0px auto;
+  /* transform: translateY(-21px);
+  position:relative;
+  top:-21px; */
+}
+.gnb > ul{
+  display: flex;
+  justify-content: space-around;
+}
+.gnb > ul > li > a{
+  color:var(--m_bg_color);
+  font-size: 1.2rem;
+}
+.gnb > ul > li > a:hover{
+  text-decoration:underline;
+}
+header i.fas{
+  color:var(--m_bg_color);
+  position:absolute; top:22px;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.fa-user{right: 5%;}
+.fa-bell{right: 2%;}
+
+/* m_navi */
+#m_navi{
+  position:fixed;
+  right: 20px; top: 50%;
+  z-index:1000;
+  width: 10px; height: 160px;
+  transform: translateY(-50%);
+}
+#m_navi > ul{position:relative;}
+#m_navi > ul > li{
+  width: 40px; height:40px;
+  border-radius:40px;
+  line-height:40px;
+  transition:0.5s;
+  background:rgb(77, 198, 255);
+  margin-top:10px;
+  transform: translateX(-100%);
+  /* transform: translateX(160px); */
+  /* position:absolute; right:0; */
+  overflow: hidden;
+}
+/* #m_navi > ul > li:first-child{top:0px;}
+#m_navi > ul > li:nth-child(2){top:45px;}
+#m_navi > ul > li:nth-child(3){top:90px;}
+#m_navi > ul > li:nth-child(4){top:135px;}
+#m_navi > ul > li:last-child{top:180px;} */
+#m_navi > ul > li:hover{
+  width: 200px;
+  /* transform: translateX(0px); */
+}
+#m_navi > ul > li:hover > span{
+  background:var(--s_color01);
+  /* transform: translateY(-2px); */
+}
+#m_navi > ul > li > span{
+  display: inline-block;
+  width:40px; height:40px;
+  border-radius:50%;
+  background:var(--s_color02);
+  color:var(--m_bg_color);
+  text-align: center;
+  font-weight:bold;
+  /* margin-right:30px; */
+  /* transform: translateY(-2px); */
+}
+#m_navi > ul > li > a{
+  color:var(--m_bg_color);
+  font-size:var(--f_size2);
+  padding-left:40px;
+  line-height: 160%;
+}
