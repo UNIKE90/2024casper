@@ -7,7 +7,7 @@
 header{
   position:absolute;
   width:100%;height:70px;
-  background:#5a5a5a;
+  z-index:1000;
 }
 header h1{
   padding: 24px 0px 0px 2%;
@@ -92,3 +92,44 @@ header i.fas{
   padding-left:40px;
   line-height: 160%;
 }
+
+/* 푸터서식 */
+footer{
+  background: var(--f_color1);
+  padding: 40px 0px;
+  height:100px;
+}
+.f_inner{
+  width: 1200px;
+  margin: 0 auto;
+}
+footer h2{
+  float:left;
+  padding-top:10px;
+  width:150px; height:40px;
+}
+footer h2 img{
+  width:100%;
+}
+.f_lnb{float:left;}
+.f_lnb ul{
+  display:flex;
+  padding-top:15px;
+}
+.f_lnb a{
+  color:#bababa;
+  padding: 0px 20px;
+  border-right:1px solid #5d5d5d;
+}
+.f_lnb li:nth-child(2) a{
+  color:var(--m_bg_color);
+}
+.f_lnb li:last-child a{border:none;}
+address{
+  clear:left;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding-left:170px;
+  color:var(--m_bg_color);
+}
+address dt, address dd{display:inline-block;}
