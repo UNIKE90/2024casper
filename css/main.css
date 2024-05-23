@@ -4,69 +4,465 @@
 /* main{} */
 
 /* 팝업 모달창 서식 */
-.modal{
-  z-index:10000;
-  background: rgba(0,0,0,.8);
-  width:100%;
-  height:100vh;
-  position:fixed;
-  top:0; left:0;
+.modal {
+  z-index: 10000;
+  background: rgba(0, 0, 0, .8);
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-.m_inner{
+
+.m_inner {
   width: 450px;
   height: auto;
-  position:absolute;
-  top:50%;
-  left:50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
   transform: translate(-50%, -50%);
-  background:var(--m_bg_color);
+  background: var(--m_bg_color);
 }
-#popup_week{margin: 15px;}
-.m_inner label{font-size: var(--f_size1);}
-#popup_close{float:right; margin:10px 10px 0 0 ;}
+
+#popup_week {
+  margin: 15px;
+}
+
+.m_inner label {
+  font-size: var(--f_size1);
+}
+
+#popup_close {
+  float: right;
+  margin: 10px 10px 0 0;
+  border: 1px solid #333;
+  background: var(--m_bg_color);
+  cursor: pointer;
+}
 
 
-#intro_m{
-  width: 100%; height: 100vh;
-  overflow: hidden;
-  position:relative;
-  color:var(--m_bg_color);
-}
-#intro_m article{
-  position:absolute;
+#intro_m {
   width: 100%;
-  top:26%;
-  z-index:100;
-  text-align:center;
-  color:var(--m_bg_color);
-  font-size:var(--f_size2);
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  color: var(--m_bg_color);
 }
-#intro_m article p{
-  line-height:80px;
+
+#intro_m article {
+  position: absolute;
+  width: 100%;
+  top: 26%;
+  z-index: 100;
+  text-align: center;
+  color: var(--m_bg_color);
+  font-size: var(--f_size2);
 }
-#intro_m article a{
-  color:var(--m_bg_color);
-  font-size:var(--f_size1);
-  text-decoration:underline;
+
+#intro_m article p {
+  line-height: 80px;
+}
+
+#intro_m article a {
+  color: var(--m_bg_color);
+  font-size: var(--f_size1);
+  text-decoration: underline;
   padding: 5px 10px;
 }
-#intro_m article a:first-of-type{
+
+#intro_m article a:first-of-type {
   background: var(--s_color01);
 }
 
-.next_page{
-  width:40px; height:40px;
-  border-right:2px solid var(--m_bg_color);
-  border-bottom:2px solid var(--m_bg_color);
-  position:absolute;
-  bottom:40px; left:50%;
-  z-index:1001;
+.next_page {
+  width: 40px;
+  height: 40px;
+  border-right: 2px solid var(--m_bg_color);
+  border-bottom: 2px solid var(--m_bg_color);
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  z-index: 1001;
   transform: rotate(45deg);
 }
 
 /* section 공통 제목서식 */
-.sec_title{
-  font-size:60px; font-weight:bold;
-  padding-bottom:20px;
+.sec_title {
+  font-size: 60px;
+  font-weight: bold;
+  padding-bottom: 20px;
   text-align: center;
+}
+
+/* 각 섹션별 여백설정 */
+#top3,
+#buy_info,
+#cs {
+  margin: 150px auto;
+  width: 1200px;
+  text-align: center;
+}
+
+/* top3콘텐츠 서식 */
+#top3 {
+  overflow: hidden;
+}
+
+.sec_title2 {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.p01 {
+  font-size: var(--f_size2);
+  line-height: 50px;
+}
+
+.top3 {
+  position: relative;
+  margin-top: 50px;
+  padding: 20px 0px 50px 0px;
+}
+
+.top3 .swiper-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* .top3 .swiper-slide{} */
+.rank {
+  color: #327186;
+  border: 1px solid #327186;
+  border-radius: 20px;
+  padding: 6px 30px;
+  font-size: var(--f_size1);
+}
+
+.top3_title {
+  font-size: 26px;
+  padding-top: 30px;
+  font-weight: 500;
+  color: var(--s_color01);
+}
+
+.top3 img {
+  padding: 80px 0px;
+  width: 400px;
+  transition: 1s;
+}
+
+.top3 .swiper-slide-active img {
+  scale: 1.2;
+}
+
+.detail {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 60px;
+}
+
+.detail li {
+  width: 190px;
+  border-right: 1px solid #ccc;
+  padding: 0px 20px;
+  font-size: var(--f_size2);
+  line-height: 20px;
+  text-align: left;
+}
+
+.detail li:last-child {
+  border: none;
+  padding-top: 6px;
+}
+
+.price {
+  font-size: 32px;
+  font-weight: 500;
+  color: #043e96;
+}
+
+/* 색상박스 */
+.outer_color,
+.inner_color {
+  /* display: inline-block; */
+  float: left;
+  width: 56px;
+  height: 40px;
+  text-indent: -9999px;
+  margin-right: 10px;
+}
+
+.kaki {
+  background: #494b3e;
+}
+
+.black {
+  background: #000;
+}
+
+.orange {
+  background: #be5600;
+}
+
+.white {
+  border: 1px solid #333;
+}
+
+.top3 .swiper-button-prev,
+.top3 .swiper-button-next {
+  color: var(--f_color1);
+  font-weight: bold;
+}
+
+.top3 .swiper-pagination-bullet {
+  background: var(--f_color1);
+  width: 70px;
+  height: 7px;
+}
+
+
+/* 3. 소개 intro */
+#intro {
+  height: 860px;
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+}
+
+#intro .sec_title2 {
+  position: absolute;
+  z-index: 100;
+  text-align: center;
+  width: 100%;
+  top: 50px;
+}
+
+.intro_title_left,
+.intro_title_right {
+  position: absolute;
+  z-index: 100;
+  font-size: 30px;
+  font-weight: 500;
+  line-height: 40px;
+  opacity: 0;
+}
+
+@keyframes ani1 {
+  0% {
+    opacity: 0;
+  }
+
+  70% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes ani2 {
+  0% {
+    opacity: 0;
+  }
+
+  90% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.intro_title_left {
+  top: 100px;
+  left: 50px;
+  text-align: left;
+  animation: ani1 5s forwards;
+}
+
+.intro_title_right {
+  bottom: 100px;
+  right: 50px;
+  text-align: right;
+  animation: ani2 5s forwards;
+}
+
+#intro video {
+  width: 100%;
+  position: relative;
+  top: -100px;
+}
+
+#intro .btn {
+  position: absolute;
+  z-index: 100;
+  bottom: 60px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: transparent;
+}
+
+#intro .btn:hover {
+  background: #333;
+}
+
+
+/* 4. 시승신청 test_drive */
+.test_drive {
+  text-align: center;
+  margin: 100px auto;
+}
+
+/* .test_drive .sec_title2{margin-top:100px;} */
+.test_drive article {
+  width: 430px;
+  height: 300px;
+  padding: 15px;
+  margin-top: 50px;
+  border: 1px solid var(--s_color04);
+  display: inline-block;
+  /* inline-block으로 배치된 요소의 높이가 다를 시 정렬을 맞춰준다 */
+  vertical-align: middle;
+}
+
+.test_drive article h3 {
+  font-size: 24px;
+  padding-top: 20px;
+  font-weight: bold;
+  line-height: 40px;
+  ;
+}
+
+.test_drive article p {
+  font-size: var(--f_size1);
+  line-height: 20px;
+  padding: 20px 0px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.test_drive article .test_d_p {
+  color: rgba(0, 0, 0, .6);
+  font-weight: 400;
+  transform: translateY(30px);
+}
+
+.test_drive .test_drive_r .test_d_p {
+  transform: translateY(70px);
+}
+
+.test_drive_l {
+  margin-right: 30px;
+}
+
+.test_d_btn1 {
+  background: var(--s_color01);
+  color: var(--m_bg_color);
+  line-height: 30px;
+  padding: 10px 60px;
+}
+
+.test_d_btn2 {
+  line-height: 40px;
+  /* display: block;
+  position:relative; top:20px; */
+  color: var(--s_color03);
+}
+
+.p_color {
+  color: var(--f_color1);
+}
+
+
+/* 5. 이벤트 프로모션 서식 */
+#event {
+  background: #eee;
+  margin: 150px auto;
+  padding: 100px 0;
+  text-align: center;
+}
+
+.event {
+  position: relative;
+  width: 1200px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.event .swiper-button-next,
+.event .swiper-button-prev {
+  background: rgba(255, 255, 255, .6);
+  color: var(--f_color1);
+  width: 30px;
+  height: 40px;
+}
+
+.event .swiper-button-next:after,
+.event .swiper-button-prev:after {
+  font-size: var(--f_size2);
+}
+
+.event .swiper-button-prev {
+  left: 0;
+}
+
+.event .swiper-button-next {
+  right: 0;
+}
+
+.event-swiper-pagination {
+  margin-top: 30px;
+}
+
+.event-swiper-pagination .swiper-pagination-bullet {
+  margin: 0 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 3px;
+  background: var(--s_color01);
+  color: var(--m_bg_color);
+  line-height: 20px;
+}
+
+
+/* 6. 캐스퍼 구매안내 서식 */
+#buy_info h3{
+  font-size: 24px;
+  font-weight: 500;
+  padding:60px 0;
+}
+#buy_info h3 .t_color{color:var(--s_color01);}
+.buy_step{
+  width: 1000px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.buy_step li{
+  margin-bottom:60px;
+}
+.buy_step h4{
+  font-weight:bold;
+  font-size:var(--f_size2);
+}
+.buy_step img{
+  width: 70px;
+  padding:10px 0px;
+}
+.buy_step p{line-height:20px;}
+
+
+/* 버튼 공통서식 */
+.btn {
+  border: 1px solid #333;
+  background: #fff;
+  padding: 8px 26px;
+  transition: 0.5s;
+}
+
+.b_btn:hover {
+  background: var(--s_color01);
+  color: var(--m_bg_color);
 }

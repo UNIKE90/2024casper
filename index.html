@@ -34,7 +34,7 @@
       </ul>
     </nav>
 
-    <a href="login.html"><i class="fas fa-user"></i></a>
+    <a href="login.html" title="로그인"><i class="fas fa-user"></i></a>
     <i class="fas fa-bell"></i> <!-- 알림아이콘 -->
   </header>
 
@@ -51,6 +51,7 @@
 
   <!-- 메인콘텐츠 영역 -->
   <main>
+    <!-- 메인 비디오 -->
     <section id="intro_m">
       <article>
         <h2 class="sec_title">CASPER</h2>
@@ -63,6 +64,149 @@
         <source src="./images/casper_te_18.webm">
       </video>
       <a href="#" title="아래로 이동" class="next_page">&nbsp;</a>
+    </section>
+
+    <!-- 2. top3 콘텐츠 영역 -->
+    <section id="top3">
+      <h2 class="sec_title2">가장 많이 찾는 캐스퍼</h2>
+      <p class="p01">지금 가장 인기 있는 조합을 확인해 보세요.</p>
+      <!-- swiper slide -->
+      <div class="swiper top3">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <span class="rank">1위</span>
+            <h3 class="top3_title">가솔린 1.0터보 인스퍼레이션</h3>
+            <img src="./images/color_khaki.02b812c.png" alt="카키">
+            <ul class="detail">
+              <li><span class="outer_color kaki">카키</span>외장색상<br> 톰보이 카키</li>
+              <li><span class="inner_color black">블랙</span>내장색상<br> 블랙</li>
+              <li>선택품목<br> 캐스퍼 액티브 ll</li>
+              <li><em class="price">19,600,000</em>원</li>
+            </ul>
+            <input type="button" value="견적내기 &gt;" class="btn b_btn">
+          </div>
+          <div class="swiper-slide">
+            <span class="rank">2위</span>
+            <h3 class="top3_title">가솔린 1.0터보 인스퍼레이션</h3>
+            <img src="./images/color_white.bebc88b.png" alt="화이트">
+            <ul class="detail">
+              <li><span class="outer_color white">화이트</span>외장색상<br> 톰보이 화이트</li>
+              <li><span class="inner_color black">블랙</span>내장색상<br> 블랙</li>
+              <li>선택품목<br> 캐스퍼 액티브 ll</li>
+              <li><em class="price">18,000,000</em>원</li>
+            </ul>
+            <input type="button" value="견적내기 &gt;" class="btn b_btn">
+          </div>
+          <div class="swiper-slide">
+            <span class="rank">3위</span>
+            <h3 class="top3_title">가솔린 1.0터보 인스퍼레이션</h3>
+            <img src="./images/color_orange.0c6edb3.png" alt="오렌지">
+            <ul class="detail">
+              <li><span class="outer_color orange">오렌지</span>외장색상<br> 톰보이 오렌지</li>
+              <li><span class="inner_color black">블랙</span>내장색상<br> 블랙</li>
+              <li>선택품목<br> 캐스퍼 액티브 ll</li>
+              <li><em class="price">16,200,000</em>원</li>
+            </ul>
+            <input type="button" value="견적내기 &gt;" class="btn b_btn">
+          </div>
+        </div>
+        <!-- 콘트롤버튼 - pagenation -->
+        <div class="swiper-pagination"></div>
+        <!-- 좌,우버튼 -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+    </section>
+
+    <!-- 3. 소개 -->
+    <section id="intro">
+      <h2 class="sec_title2">소개</h2>
+      <span class="intro_title_left">강인하고<br>아이코닉한 SUV</span>
+      <span class="intro_title_right">젊고 역동적인<br>감성의<br>SUV디자인</span>
+      <video autoplay muted>
+        <source src="./images/highlight_intro.mp4" type="video/mp4">
+      </video>
+      <input type="button" value="더보기 &gt;" class="btn b_btn">
+    </section>
+
+    <!-- 4. 시승신청 -->
+    <section class="test_drive">
+      <h2 class="sec_title2">시승신청</h2>
+      <p class="p01">캐스퍼가 제공하는 편리한 시승 서비스를 이용해 보세요.</p>
+      <article class="test_drive_l">
+        <h3>현대자동차 드라이빙 라운지 <br>/ CASPER STUDIO시승</h3>
+        <p>드라이빙 라운지와 CASPER STUDIO에서<br> 캐스퍼를 체험해 보세요.</p>
+        <a href="test_drive.html" title="시승신청예약" class="test_d_btn1">시승 신청하기</a><br>
+        <a href="test_drive.html" title="시승신청조회" class="test_d_btn2">시승신청조회 <span class="p_color">&#x003E;</span></a>
+        <p class="test_d_p">&middot; 시승 신청은 만 21세 이상 운전면허 소지자면 누구나 이용 가능합니다.</p>
+      </article>
+      <article class="test_drive_r">
+        <h3>쏘카<br>카쉐어링 시승</h3>
+        <p>24시간 언제나 내 근처에서 편리하게<br>캐스퍼를 체험할 수 있습니다.</p>
+        <a href="test_drive.html" title="시승신청예약" class="test_d_btn1">시승 신청하기</a>
+        <p class="test_d_p">&middot; 쏘카는 만 21세 이상, 운전면허 취득 1년 이상 시 이용할 수 있습니다.</p>
+      </article>
+    </section>
+
+    <!-- 5. 이벤트&프로모션 -->
+    <section id="event">
+      <h2 class="sec_title2">이벤트&#38;프로모션</h2>
+      <p class="p01">다양한 이벤트 &#38; 프로모션과 함께 캐스퍼를 만나보세요.</p>
+
+      <div class="swiper event">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><a href="#" title=""><img src="./images/event1.png" alt=""></a></div>
+          <div class="swiper-slide"><a href="#" title=""><img src="./images/event2.jpg" alt=""></a></div>
+          <div class="swiper-slide"><a href="#" title=""><img src="./images/event3.jpg" alt=""></a></div>
+          <div class="swiper-slide"><a href="#" title=""><img src="./images/event4.jpg" alt=""></a></div>
+          <div class="swiper-slide"><a href="#" title=""><img src="./images/event5.jpg" alt=""></a></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <div class="event-swiper-pagination"></div>
+    </section>
+
+    <!-- 6. 캐스퍼 구매안내 -->
+    <section id="buy_info">
+      <h2 class="sec_title2">캐스퍼구매 안내</h2>
+      <p class="p01">구매 절차를 차근차근 알려드립니다.</p>
+
+      <h3>캐스퍼, <span class="t_color">온라인</span>에서만 <span class="t_color">구매</span>할 수 있습니다.</h3>
+
+      <ul class="buy_step">
+        <li>
+          <h4>쉬운 모델 선택</h4>
+          <img src="./images/icon_01.jpg" alt="아이콘">
+          <p>원하는 사양의 차량을 3D로 확인해 볼 수 있고,<br>데이터를 기반으로 나에게 맞는 캐스퍼를 추천받을 수 있습니다.</p>
+        </li>
+        <li>
+          <h4>구매 시뮬레이션</h4>
+          <img src="./images/icon_02.jpg" alt="아이콘">
+          <p>구매시뮬레이션을 통해<br>나의 자금 사정에 맞는<br>구매 계획을 세울 수 있습니다.</p>
+        </li>
+        <li>
+          <h4>자유로운 취소/변경</h4>
+          <img src="./images/icon_03.jpg" alt="아이콘">
+          <p>계약 후에도 차량대금 결제 전이라면<br>자유롭게 원하는 사양으로 변경하고,<br>계약을 취소할 수 있습니다.(단, 특별주문차 제외)</p>
+        </li>
+        <li>
+          <h4>찾아가는 배송</h4>
+          <img src="./images/icon_04.jpg" alt="아이콘">
+          <p>집, 직장 등 내가 원하는 장소에서<br>캐스퍼를 배송 받으 수 있습니다.</p>
+        </li>
+        <li>
+          <h4>진행 단계 알림</h4>
+          <img src="./images/icon_05.jpg" alt="아이콘">
+          <p>계약부터 차량 등록까지<br>나의 계약 진행 상태를 메시지로 전송받을 수 있습니다.</p>
+        </li>
+        <li>
+          <h4>향상된 고객지원</h4>
+          <img src="./images/icon_06.jpg" alt="아이콘">
+          <p>밤 10시까지 캐스퍼 고객센터(080-500-6000)를 통해 문의사항을<br>해결할 수 있고, 현대자동차의<br>직영서비스센터와 블루렌즈도 이용할 수 있습니다.</p>
+        </li>
+      </ul>
+      <iframe width="1000" height="500" src="https://www.youtube.com/embed/MQSGzDRejUM?si=3A40hjHqDMLlfrRx" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
   </main>
 
@@ -105,5 +249,45 @@
   <script src="./script/jquery.cookie.js"></script>
   <script src="./script/swiper.js"></script>
   <script src="./script/main.js"></script>
+  <script>
+    var swiper = new Swiper('.top3',{
+      autoplay:{
+        delay:3000,
+        disableOnInteraction: false,
+      },
+      loop:true, // 무한반복
+      navigation:{
+        nextEl:".top3 .swiper-button-next",
+        prevEl:".top3 .swiper-button-prev",
+      },
+      pagination:{
+        el:'.top3 .swiper-pagination',
+        clickable:true, // 콘트롤 버튼 클릭
+      }
+    });
+    
+    var swiper = new Swiper('.event',{
+      width:1200,
+      autoplay:{
+        delay:3000,
+        disableOnInteraction: false,
+      },
+      loop:true, // 무한반복
+      navigation:{
+        nextEl:".event .swiper-button-next",
+        prevEl:".event .swiper-button-prev",
+      },
+      pagination:{
+        el:'.event-swiper-pagination',
+        clickable: true, // 콘트롤 버튼 클릭
+      }
+    });
+    const event_pagination = document.querySelectorAll('.event-swiper-pagination .swiper-pagination-bullet');
+    for(i=0; i<event_pagination.length; i++){
+      let n = i+1;
+      event_pagination[i].innerHTML=n;
+    }
+
+  </script>
 </body>
 </html>
