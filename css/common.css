@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+
+/* html, body{
+  scroll-behavior: smooth;
+} */
 /* common.css
   header, footer서식
 */
@@ -12,6 +16,15 @@ header{
 header h1{
   padding: 24px 0px 0px 2%;
 }
+
+/* 스크롤시 헤더 배경에 넣을 서식 */
+.h_act{
+  position:fixed;
+  top:0px; left:0px; z-index:3000;
+  background: rgba(255,255,255,.8) !important;
+}
+.h_act a, .h_act i{color:var(--f_color1) !important;}
+
 
 /* 내비게이션 */
 .gnb{

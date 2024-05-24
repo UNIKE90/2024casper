@@ -96,8 +96,7 @@
 
 /* 각 섹션별 여백설정 */
 #top3,
-#buy_info,
-#cs {
+#buy_info {
   margin: 150px auto;
   width: 1200px;
   text-align: center;
@@ -279,6 +278,8 @@
   top: 100px;
   left: 50px;
   text-align: left;
+}
+.act1{
   animation: ani1 5s forwards;
 }
 
@@ -286,6 +287,8 @@
   bottom: 100px;
   right: 50px;
   text-align: right;
+}
+.act2{
   animation: ani2 5s forwards;
 }
 
@@ -378,7 +381,7 @@
 
 /* 5. 이벤트 프로모션 서식 */
 #event {
-  background: #eee;
+  background: var(--s_color05);
   margin: 150px auto;
   padding: 100px 0;
   text-align: center;
@@ -428,30 +431,191 @@
 
 
 /* 6. 캐스퍼 구매안내 서식 */
-#buy_info h3{
+#buy_info h3 {
   font-size: 24px;
   font-weight: 500;
-  padding:60px 0;
+  padding: 60px 0;
 }
-#buy_info h3 .t_color{color:var(--s_color01);}
-.buy_step{
+
+#buy_info h3 .t_color {
+  color: var(--s_color01);
+}
+
+.buy_step {
   width: 1000px;
   margin: 0 auto;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
-.buy_step li{
-  margin-bottom:60px;
+
+.buy_step li {
+  margin-bottom: 60px;
 }
-.buy_step h4{
-  font-weight:bold;
-  font-size:var(--f_size2);
+
+.buy_step h4 {
+  font-weight: bold;
+  font-size: var(--f_size2);
 }
-.buy_step img{
+
+.buy_step img {
   width: 70px;
-  padding:10px 0px;
+  padding: 10px 0px;
 }
-.buy_step p{line-height:20px;}
+
+.buy_step p {
+  line-height: 20px;
+}
+
+
+/* 7. 고객지원 서식 */
+.cs {
+  background: var(--s_color05);
+  padding: 80px 0;
+}
+
+.cs>h2 {
+  text-align: center;
+  margin-bottom: 80px;
+}
+
+.cs>article,
+.cs>ul,
+.cs>.random_banner {
+  width: 1200px;
+  margin: 15px auto;
+}
+
+.cs>article {
+  background: var(--m_bg_color);
+  padding-bottom:30px;
+}
+
+.cs>article>h3 {
+  font-size: 18px;
+  text-align: center;
+  padding: 40px 0px 20px 0px;
+  font-weight: bold;
+}
+
+.ars_left{border-right:1px solid var(--s_color04);}
+
+.ars_left,
+.ars_right {
+  width: 50%;
+  padding: 20px 30px;
+  box-sizing: border-box;
+  float: left;
+  display: flex;
+  justify-content: space-around;
+}
+
+.cs p {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.cs strong {
+  font-weight: 500;
+  font-size: var(--f_size2);
+  line-height: 30px;
+}
+
+.cs a {
+  color: var(--s_color03);
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.car_icon,
+.member_icon {
+  background: url(../images/bg-support-ars.png);
+  display: inline-block;
+  height: 46px;
+  text-indent: -9999px;
+}
+
+.car_icon {
+  width: 80px;
+  margin-top: 60px;
+}
+
+.member_icon {
+  background-position: -90px 0px;
+  width: 60px;
+  margin-top: 30px;
+}
+
+.cs dl {
+  line-height: 24px;
+}
+
+.cs dl dt {
+  font-weight: bold;
+}
+
+.cs dl dd {
+  color: var(--f_color1);
+}
+
+/* 플로트 속성 해제 */
+.clearfix:after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.cs>ul {
+  display: flex;
+}
+
+.cs>ul>li {
+  margin-right: 15px;
+  background: var(--m_bg_color);
+  width: 25%;
+  box-sizing: border-box;
+  padding:35px;
+  position:relative;
+}
+.cs>ul>li:last-child {
+  margin-right:0;
+}
+.cs>ul>li>h3 {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.cs>ul>li>p {
+  text-align: left;
+  align-items: baseline;
+  line-height: 24px;
+}
+.cs>ul>li>p:first-of-type {
+  font-weight:bold;
+}
+a.cs_btn{
+  width:50%;
+  height: 36px;
+  display: block;
+  position:absolute;
+  background:var(--s_color02);
+  color:var(--m_bg_color);
+  text-align: center;
+  bottom:40px;
+  left:50%;
+  transform: translateX(-50%);
+  padding-top:3px;
+}
+.cs>ul>li:last-child{
+  text-align: center;
+}
+.cs>ul>li:last-child>h3{
+  text-align: left;
+}
+.cs>ul>li:last-child a:nth-of-type(2){
+  margin-right:30px;
+}
 
 
 /* 버튼 공통서식 */
