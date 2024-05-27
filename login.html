@@ -25,7 +25,7 @@
       width: 500px;
       height: 100%;
       /* margin: 0 auto; */
-      padding: 200px 60px;
+      padding: 30px 60px 200px;
       box-sizing: border-box;
       position:relative;
       /* position:absolute;
@@ -34,7 +34,13 @@
       transform: translate(-50%, -50%); */
       margin:0 auto;
     }
-    legend, label[for="id_txt"], label[for="pw_txt"]{display:none}
+    legend{
+      text-align: center;
+      font-size:24px;
+      font-weight:bold;
+      padding-top: 200px;
+    }
+    label[for="id_txt"], label[for="pw_txt"]{display:none}
     #id_txt, #pw_txt{
       border:none;
       width: 100%;
@@ -52,6 +58,7 @@
       border:none;
       font-size: 16px;
       margin:10px 0;
+      cursor: pointer;
     }
     .search{
       text-align: center;
@@ -89,9 +96,9 @@
     <i class="fas fa-bell"></i> <!-- 알림아이콘 -->
   </header>
   <main>
-    <form name="login">
+    <form name="login" onsubmit="return form_check()" method="post">
       <fieldset>
-        <legend>로그인 폼</legend>
+        <legend>로그인</legend>
         <p>
           <label for="id_txt">ID : </label>
           <input type="text" id="id_txt" name="id_txt" maxlength="16" placeholder="아이디를 입력해주세요." autocomplete="off">
@@ -201,6 +208,26 @@
       }
       return unescape(cookieValue);
     }
-  </script>
+
+    function form_check(){
+      try{
+        const id_txt = document.getElementById('id_txt');
+        const pw_txt = document.getElementById('pw_txt');
+      if(id_txt.value.length<1){
+        alert('아이디를 입력하지 않았습니다.');
+        id_txt.focus();
+        return false;
+      }
+      if(pw_txt.value.length<1){
+        alert('패스워드를 입력하지 않았습니다.');
+        pw_txt.focus();
+        return false;
+      }
+      return true;
+      }catch(error){
+        alert(error)
+      }
+    }
+</script>
 </body>
 </html>
