@@ -1,0 +1,2 @@
+INSERT INTO `member` (`mb_no`, `mb_id`, `mb_password`, `mb_name`, `mb_email`, `mb_job`, `mb_gender`, `mb_language`, `mb_datetime`) VALUES
+(1, 'bbbb', '*A4B6157319038724E3560894F7F932C8886EBFCF', 'bbbb', 'bbbb@naver.com', '회사원', '남자', 'HTML', '2024-05-09 12:09:43');

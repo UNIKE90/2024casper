@@ -117,7 +117,7 @@
       </ul>
     </nav>
 
-    <a href="../login.html" title="로그인"><i class="fas fa-user"></i></a>
+    <a href="../login.php" title="로그인"><i class="fas fa-user"></i></a>
     <i class="fas fa-bell"></i> <!-- 알림아이콘 -->
   </header>
   

@@ -1,3 +1,5 @@
+<?php include('./php/dbconn.php'); ?>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -92,11 +94,12 @@
       </ul>
     </nav>
 
-    <a href="login.html" title="로그인"><i class="fas fa-user"></i></a>
+    <a href="login.php" title="로그인"><i class="fas fa-user"></i></a>
     <i class="fas fa-bell"></i> <!-- 알림아이콘 -->
   </header>
+
   <main>
-    <form name="login" onsubmit="return form_check()" method="post">
+    <form name="login" onsubmit="return form_check()" method="post" action="./php/login_check.php">
       <fieldset>
         <legend>로그인</legend>
         <p>
@@ -112,7 +115,7 @@
         <p class="search">
           <a href="#" title="아이디 찾기">아이디 찾기</a>
           <a href="#" title="비밀번호 찾기">비밀번호 찾기</a>
-          <a href="#" title="회원가입">회원가입</a>
+          <a href="./php/register.php" title="회원가입">회원가입</a>
         </p>
       </fieldset>
     </form>
